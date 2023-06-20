@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints "write programm using c to print 
- *                (Programming is like building a multilingual puzzl).
+ * main - Prints "write programm using c to print(Programming is like building a multilingual puzzl).
  *
  * Return: Always 0.
  */
