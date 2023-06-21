@@ -2,21 +2,14 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase, and then in uppercase.
- *
- * Return: Always 0.
+ * _islower - Checks if a character is lowercase.
+ * 
+ * Return: 1 if character is lowercase, 0 otherwise.
  */
-int main(void)
+int _islower(int c)
 {
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-		putchar(letter);
-
-	for (letter = 'A'; letter <= 'Z'; letter++)
-		putchar(letter);
-
-	putchar('\n');
-
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }
