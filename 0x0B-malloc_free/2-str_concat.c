@@ -1,4 +1,4 @@
-#include "min.h"
+#include "mian.h"
 #include <stdlib.h>
 
 /**
