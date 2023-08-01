@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 #include "main.h"
 #include <string.h>
+=======
+#include <string.h>
+#include "main.h"
+
+>>>>>>> temp-branch
 
 /**
  * add_node_end - Adds a new node at the end
@@ -11,6 +17,7 @@
  *         Otherwise - the address of the new element.
  */
 list_t *add_node_end(list_t **head, const char *str)
+<<<<<<< HEAD
 {
 	char *dup;
 	int len;
@@ -31,10 +38,27 @@ list_t *add_node_end(list_t **head, const char *str)
 		len++;
 
 	new->str = dup;
+=======
+
+{
+       	list_t *new;
+	list_t *temp = *head;
+	unsigned int len = 0;
+
+	while (str[len])
+		len++;
+
+	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
+
+	new->str = strdup(str);
+>>>>>>> temp-branch
 	new->len = len;
 	new->next = NULL;
 
 	if (*head == NULL)
+<<<<<<< HEAD
 		*head = new;
 
 	else
@@ -47,3 +71,19 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	return (*head);
 }
+=======
+	{
+		*head = new;
+		return (new);
+	}
+
+	while (temp->next)
+	temp = temp->next;
+
+	temp->next = new;
+
+	return (new);
+}
+
+
+>>>>>>> temp-branch
